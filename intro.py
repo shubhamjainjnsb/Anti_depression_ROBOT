@@ -71,7 +71,7 @@ def Music_love():
     if "yes" in q:
         s.speak("we are all set now .you can start singing")
         x=s.myCommand()
-        playsound('C:\Indian_Idol.mp3')
+        playsound('Indian_Idol.mp3')
         s.speak("Congratulations!!You will go for mega auditions")
         s.speak("Jokes aparrt You have sung very well but you can do way more better than this. ")
 
