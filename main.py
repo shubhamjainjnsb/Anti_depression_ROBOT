@@ -17,17 +17,17 @@ Window.clearcolor = (0,153/255,153/255,1) #open RGB calculator take the values a
 class AntiApp(App):
     
     def build(self):
-        layout=BoxLayout(orientation='vertical',spacing=10,padding=40)
+        layout=BoxLayout(orientation='vertical',spacing=10,padding=20)
         logo=Image(source="logo.png")
-        btn=Button(text="SPEAKING",size_hint=(None,None),width=100,height=50,
+        btn=Button(text="SPEAKING",size_hint=(None,None),width=200,height=100,
                    pos_hint={'center_x':0.5},
                    background_color=(0,0,0,1))
-        btn2 = Button(text="TYPING",size_hint=(None,None),width=100,height=50,
+        btn2 = Button(text="TYPING",size_hint=(None,None),width=200,height=100,
                    pos_hint={'center_x':0.5},
                       background_color=(5/255,5/255,5/255,1))
         
         label=Label(text="                     WELCOME, I AM TALK BOB."+"\n" +"HOW WOULDYOU LIKE TO CONVERSE WITH ME",
-                    font_size='25sp',bold=True,italic=True)
+                    font_size='17sp',bold=True,italic=True)
         layout.add_widget(label)
         layout.add_widget(logo)
         btn.bind(on_press= lambda a:call_voice())
