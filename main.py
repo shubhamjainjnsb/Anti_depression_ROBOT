@@ -7,12 +7,11 @@ from kivy.uix.floatlayout import FloatLayout
 from kivy.core.window import Window
 from kivy.uix.image import Image
 from kivy.config import Config
-def call_mute():
-    import main_muted
-def call_voice():
-    import main_asli
+import main_muted
+import main_asli
+
 Config.set('graphics', 'resizable', True)
-Window.clearcolor = (0,153/255,153/255,1) #open RGB calculator take the values and divide by 255
+Window.clearcolor = (0,153/255,153/255,1)
 
 class AntiApp(App):
     
@@ -26,15 +25,14 @@ class AntiApp(App):
                    pos_hint={'center_x':0.5},
                       background_color=(5/255,5/255,5/255,1))
         
-        label=Label(text="                     WELCOME, I AM TALK BOB."+"\n" +"HOW WOULDYOU LIKE TO CONVERSE WITH ME",
+        label=Label(text="WELCOME, I AM TALK BOB.\nHOW WOULD YOU LIKE TO CONVERSE WITH ME",
                     font_size='17sp',bold=True,italic=True)
         layout.add_widget(label)
         layout.add_widget(logo)
-        btn.bind(on_press= lambda a:call_voice())
-        btn2.bind(on_press= lambda a:call_mute())
+        btn.bind(on_press= lambda a: main_asli)
+        btn2.bind(on_press= lambda a: main_muted)
         layout.add_widget(btn)
         layout.add_widget(btn2)
-
 
         return layout
 
